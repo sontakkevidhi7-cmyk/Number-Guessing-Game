@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Heading -->
+    <div class="title">
+        <h1>
+            <i class="fa-solid fa-gamepad"></i>
+            Number Guessing Game
+        </h1>
+
+        <p>
+            Choose your difficulty level and start guessing!
+        </p>
+    </div>
+
+    <!-- Difficulty Section -->
+    <div class="difficulty-section">
+
+        <h2>Select Difficulty Level</h2>
+
+        <button class="level-btn easy" data-level="easy">
+            <i class="fa-solid fa-seedling"></i>
+            EASY
+            <span>
+                Guess between 1 - 50 <br>
+                4 Chances
+            </span>
+        </button>
+
+        <button class="level-btn medium" data-level="medium">
+            <i class="fa-solid fa-fire"></i>
+            MEDIUM
+            <span>
+                Guess between 1 - 100 <br>
+                6 Chances
+            </span>
+        </button>
+
+        <button class="level-btn hard" data-level="hard">
+            <i class="fa-solid fa-crown"></i>
+            HARD
+            <span>
+                Guess between 1 - 500 <br>
+                8 Chances
+            </span>
+        </button>
+
+        <!-- Level Selected Message -->
+
+        <div id="selectionMessage">
+            ✔ Difficulty Selected Successfully!
+        </div>
+
+    </div>
+
+
+    <!-- GAME AREA -->
+
+    <div class="game-section">
+
+        <!-- Game Info -->
+
+        <div class="info-box">
+
+            <div class="card">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Range</h3>
+                <p id="rangeText">
+                    --
+                </p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-heart"></i>
+                <h3>Remaining Chances</h3>
+                <p id="chanceText">
+                    --
+                </p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-list"></i>
+                <h3>Total Guesses</h3>
+                <p id="guessCount">
+                    0
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Progress -->
+
+        <div class="progress-area">
+
+            <h3>Game Progress</h3>
+
+            <div class="progress">
+
+                <div class="progress-fill">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Guess Input -->
+
+        <div class="guess-box">
+
+            <h2>Enter Your Guess</h2>
+
+            <input
+            type="number"
+            id="guessInput"
+            placeholder="Enter Number">
+
+            <button id="guessBtn">
+                <i class="fa-solid fa-paper-plane"></i>
+                Guess Number
+            </button>
+
+        </div>
+
+
+        <!-- Hint -->
+
+        <div class="hint-box">
+
+            <h2>
+                Hint
+            </h2>
+
+            <p id="hint">
+                Select a level to start playing.
+            </p>
+
+        </div>
+
+
+        <!-- History -->
+
+        <div class="history">
+
+            <h2>
+                Previous Guesses
+            </h2>
+
+            <div id="historyList">
+
+                No guesses yet...
+
+            </div>
+
+        </div>
+
+
+        <!-- Result -->
+
+        <div class="result-box">
+
+            <h2 id="resultText">
+                Good Luck!
+            </h2>
+
+            <button id="restartBtn">
+                <i class="fa-solid fa-rotate-right"></i>
+                Start New Game
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
